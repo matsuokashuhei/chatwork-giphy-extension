@@ -7,7 +7,7 @@
   observer.observe(document.getElementById("_timeLine"), {childList: true});
 
   function changeURLTo(innerHTML) {
-    var elements = document.querySelectorAll(`a[href^="http://giphy.com/"]`);
+    const elements = document.querySelectorAll(`a[href^="http://giphy.com/"]`);
     Array.apply(null, elements).forEach((element) => {
       element.innerHTML = innerHTML(element.href);
     })
